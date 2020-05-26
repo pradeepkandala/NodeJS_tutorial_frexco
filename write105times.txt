@@ -1,0 +1,16 @@
+var fs= require('fs');
+
+
+var writeData="Hello Pradeep"
+var writeStream = fs.createWriteStream('Big_data.txt');
+
+while(i < 100000 ){
+writeStream.write(writeData, 'UTF8');
+i++;
+}
+
+
+
+writeStream.on('finish', function(){
+	console.log("completed writing")
+});

@@ -1,0 +1,13 @@
+var nmb=2000000;
+
+var sum = Largest();
+    console.log(sum);
+function Largest(){
+    for(i=2;i<=nmb;i++){
+        if(nmb%i == 0){
+          while (nmb%i==0) nmb/=i;
+          sum += i;
+          }
+    }
+    return sum;
+}
